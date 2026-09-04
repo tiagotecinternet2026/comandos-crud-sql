@@ -41,3 +41,12 @@ VALUES(
     1 -- id do fornecedor Eletrônicos Tabajara
 );
 ```
+
+## INSERT na tabela de Lojas
+
+```sql
+INSERT INTO lojas(nome) VALUES('Casas Bahia');
+INSERT INTO lojas(nome) VALUES('Shopping Zona Leste');
+INSERT INTO lojas(nome) VALUES('Bazar das Coisas');
+INSERT INTO lojas(nome) VALUES('Americanas');
+```
