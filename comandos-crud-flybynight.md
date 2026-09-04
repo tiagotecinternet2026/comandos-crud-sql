@@ -1,9 +1,8 @@
 # Comandos CRUD para o banco de dados Fly By Night
 
-## Fornecedores
+## INSERT na tabela de Fornecedores
 
 ```sql
--- INSERT de fornecedores
 INSERT INTO fornecedores (nome) VALUES('Eletrônicos Tabajara');
 
 INSERT INTO fornecedores (nome) VALUES
