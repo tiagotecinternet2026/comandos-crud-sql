@@ -14,5 +14,49 @@ VALUES('Carla Mendes', 'carla@email.com', '789xyz', 'editor');
 ```
 
 ## INSERT na tabela categorias
+```sql
+INSERT INTO categorias(nome) VALUES('Tecnologia'), ('Educação'), ('Entretenimento');
+```
+
 
 ## INSERT na tabela noticias
+
+```sql
+INSERT INTO noticias(titulo, resumo, texto, imagem, destaque, usuario_id, categoria_id)
+VALUES(
+    'Corinthians está mau pra caramba',
+    'O time caiu muito após a copa do mundo',
+    'Não sei mais o que escrever sobre isso tudo e etc e tal e bla bla',
+    'corinthians.jpg',
+    'nao',
+    3,
+    3
+);
+
+INSERT INTO noticias(titulo, resumo, texto, imagem, destaque, usuario_id, categoria_id)
+VALUES(
+    'Senac prepara novos títulos para 2027',
+    'Em 2027 diversos títulos com bolsas de estudos serão lançados',
+    'Um texto qualquer sobre esta notícia de cursos do Senac com bolsas para 2027 e etc',
+    'cursos.png',
+    'sim',
+    1,
+    2
+), (
+    'Visual Studio Code com IA aprimorada',
+    'As atualizações recentes do VSCode trouxeram melhorias para o Copilot',
+    'Usar o VSCode ficou mais fácil pois etc e tal e bla bla bla e etc e sei la etc',
+    'vscode.jpg',
+    'sim',
+    2,
+    1
+), (
+    'Novo filme do Homem Aranha estreia nesta quinta',
+    'Miranha é o cara',
+    'Vai no cinema? Eu não... tá caro e tá frio demais... vou baixar na internet',
+    'miranha.jpg',
+    'nao',
+    1,
+    3
+);
+```
