@@ -60,3 +60,43 @@ VALUES(
     3
 );
 ```
+
+---
+
+## UPDATE
+
+```sql
+-- 1. Alterar o nome de um dos usuários cadastrados.
+UPDATE usuarios SET nome = 'Fulano da Silva' WHERE id = 1;
+
+-- 2. Alterar o tipo de um usuário de editor para admin.
+UPDATE usuarios SET tipo = 'admin' WHERE id = 3;
+
+-- 3. Alterar o nome de uma categoria.
+UPDATE categorias SET nome = 'Diversão' WHERE id = 3;
+
+-- 4. Alterar o título de uma notícia.
+UPDATE noticias SET titulo = 'Senac antecipa novos cursos' WHERE id = 2;
+
+-- 5. Alterar uma notícia que esteja com destaque = 'nao' para destaque = 'sim'.
+UPDATE noticias SET destaque = 'sim' WHERE id = 1;
+
+
+-- 6. Alterar a categoria de uma notícia.`
+UPDATE noticias SET categoria_id = 1 WHERE id = 1;
+```
+
+## DELETE
+
+```sql
+-- 1. Excluir uma das notícias cadastradas.
+DELETE FROM noticias WHERE id = 4;
+
+-- 2. Excluir uma categoria que não esteja sendo utilizada por nenhuma notícia.
+DELETE FROM categorias WHERE id = 3;
+
+-- 3. Excluir um usuário que não esteja associado a nenhuma notícia.
+DELETE FROM usuarios WHERE id = 3;
+
+-- Obs: neste exemplo foi possível excluir mesmo havendo notícias deste usuários, pois na modelagem física deixamos configurado o relacionamento entre as tabelas (noticias e usuarios) para que ao excluir uma notícia, o campo usuario_id automaticamente fosse setado para null
+```
