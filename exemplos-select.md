@@ -90,3 +90,31 @@ SELECT nome, preco FROM produtos WHERE NOT preco > 1000;
 **Obs.:** o uso do `NOT` não é obrigatório, desde que você consiga o mesmo resultado usando uma lógica diferente, como no exemplo: 
 `SELECT nome, preco FROM produtos WHERE preco <= 1000;`
 
+### BETWEEN
+
+Exibir produtos com preço **entre 100 e 500**.
+
+```sql
+SELECT nome, preco FROM produtos
+WHERE preco BETWEEN 100 AND 500;
+```
+
+### IN
+
+Exibir produtos que tenha o fornecedor ID 1, 4 ou 8.
+
+```sql
+SELECT * FROM produtos
+WHERE fornecedor_id IN (1, 4, 8); -- lista de valores
+```
+
+Sem usar o `IN`, teríamos que fazer a lógica com múltimplos `OR`:
+
+```sql
+SELECT * FROM produtos 
+WHERE 
+    fornecedor_id = 1 OR 
+    fornecedor_id = 4 OR 
+    fornecedor_id = 8;
+```
+
