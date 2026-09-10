@@ -227,6 +227,10 @@ SELECT
     COUNT(*) AS quantidade_produtos,
     MIN(preco) AS menor_preco,
     MAX(preco) AS maior_preco,
-    ROUND(AVG(preco), 2) AS preco_medio
+    ROUND (AVG(preco), 2) AS preco_medio
 FROM produtos;
 ```
+
+**Atenção:** não coloque espaço entre o nome da função e os parênteses!
+
+
