@@ -329,5 +329,32 @@ INNER JOIN fornecedores
     ON produtos.fornecedor_id = fornecedores.id;
 ```
 
+### Apelidos (alias) para tabelas
 
+Podemos usar apelidos para tornar consultas maiores mais compactas.
+
+```sql
+SELECT
+    p.nome AS produto,
+    p.preco,
+    f.nome AS fornecedor
+FROM produtos AS p
+INNER JOIN fornecedores AS f
+    ON p.fornecedor_id = f.id;
+```
+Neste exemplo:
+    - `p` representa a tabela `produtos`;
+    - `f` representa a tabela `fornecedores`;
+
+**Dica:** versão ainda mais compacta omitindo o `AS`:
+
+```sql
+SELECT
+    p.nome produto,
+    p.preco,
+    f.nome fornecedor
+FROM produtos p
+INNER JOIN fornecedores f
+    ON p.fornecedor_id = f.id;
+```    
 
